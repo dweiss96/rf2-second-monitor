@@ -1,0 +1,53 @@
+{
+  "session": {
+    "trackName": "Road Atlanta GP Course",
+    "session": "PRACTICE1",
+    "currentEventTime": 50.8,
+    "endEventTime": 9930.0,
+    "maximumLaps": 2147483647,
+    "numberOfVehicles": 0,
+    "gamePhase": 5,
+    "yellowFlagState": "NONE",
+    "sectorFlag": [
+      "UNKNOWN",
+      "UNKNOWN",
+      "UNKNOWN"
+    ],
+    "darkCloud": 0.0,
+    "raining": 0.0,
+    "ambientTemp": 25.850000000000023,
+    "trackTemp": 28.592033521477845,
+    "windSpeedVelocity": 0.0,
+    "minPathWetness": 0.0,
+    "averagePathWetness": 0.0,
+    "maxPathWetness": 0.0,
+    "startEventTime": 36000.0,
+    "raceCompletion": {
+      "timeCompletion": 0.002101010101010101
+    }
+  },
+  "drivers": [
+    {
+      "position": 0,
+      "carNumber": "01",
+      "driverName": "Gabi Gasfuss",
+      "fullTeamName": "Audi",
+      "completedLaps": 0,
+      "gap": "",
+      "interval": "",
+      "currentLap": "",
+      "estimatedLap": "",
+      "bestLap": "",
+      "lastLap": "",
+      "pitState": "EXITING",
+      "sector": "SECTOR1",
+      "pitstops": 0,
+      "penalties": 0,
+      "qualification": 1,
+      "slotID": 33,
+      "pitGroup": "Group1",
+      "inGarageStall": false,
+      "finishStatus": "FSTAT_NONE"
+    }
+  ]
+}

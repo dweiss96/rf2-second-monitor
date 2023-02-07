@@ -13,6 +13,8 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
+# ws://localhost:5397/websocket/ui
+
 # generate static project
 $ yarn generate
 ```

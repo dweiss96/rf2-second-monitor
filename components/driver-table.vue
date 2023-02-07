@@ -3,10 +3,10 @@
     :headers="headers"
     :items="drivers"
     class="driverTable elevation-1"
-    disable-sort
+    
     dense
     :items-per-page="-1"
-    :sort-by="['Position']"
+    :sort-by="['position']"
     hide-default-footer
   >
   <template v-slot:item.penalties="{ item }">
@@ -40,28 +40,32 @@
           },
           { 
             text: 'Number',
+            sortable: false,
             value: 'carNumber',
             align: 'center',
             width: 10,
             divider: true
           },
-          { text: 'Name', value: 'driverName', },
-          { text: 'Team', value: 'fullTeamName', divider: true },
-          { text: 'Laps', value: 'completedLaps',width: 10, align: 'center' },
-          { text: 'Gap', value: 'gap',width: 10, align: 'center' },
-          { text: 'Interval', value: 'interval',width: 10, align: 'center' },
-          { text: 'Current', value: 'currentLap',width: 10, align: 'center' },
-          { text: 'Estimated', value: 'estimatedLap',width: 10, align: 'center' },
-          { text: 'Last', value: 'lastLap',width: 10, align: 'center' },
-          { text: 'Best', value: 'bestLap',width: 10, divider: true, align: 'center' },
-          { text: 'Pit State', value: 'pitState',
+          { text: 'Name', value: 'driverName',sortable: false, },
+          { text: 'Team', value: 'fullTeamName',sortable: false, divider: true },
+          { text: 'Laps', value: 'completedLaps',width: 10,sortable: false, align: 'center' },
+          { text: 'Gap', value: 'gap',width: 10,sortable: false, align: 'center' },
+          { text: 'Interval', value: 'interval',sortable: false,width: 10, align: 'center' },
+          { text: 'Current', value: 'currentLap',sortable: false,width: 10, align: 'center' },
+          // { text: 'Estimated', value: 'estimatedLap',width: 10, align: 'center' },
+          { text: 'Last', value: 'lastLap',sortable: false,width: 10, align: 'center' },
+          { text: 'Best', value: 'bestLap',sortable: false,width: 10, divider: true, align: 'center' },
+          
+          { text: 'Front Tire', value: 'frontTire',sortable: false,width: 10, align: 'center' },
+          { text: 'Rear Tire', value: 'rearTire',sortable: false,width: 10, align: 'center' },
+          { text: 'Pit State', value: 'pitState',sortable: false,
 
           align: 'center',
             width: 10, },
-          { text: 'Stops', value: 'pitstops',
+          { text: 'Stops', value: 'pitstops',sortable: false,
             align: 'center', 
             width: 10,},
-          { text: 'Penalty', value: 'penalties' ,
+          { text: 'Penalty', value: 'penalties' ,sortable: false,
             align: 'center',
             width: 50,},
         ],

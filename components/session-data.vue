@@ -5,19 +5,9 @@
     class="driverTable elevation-1"
     disable-sort
     dense
-    :items-per-page="-1"
-    :sort-by="['Position']"
+    :items-per-page="1"
     hide-default-footer
   >
-  <template v-slot:item.yellowFlagState="{ item }">
-    <v-chip
-      :color="item.yellowFlagState != 'NONE' ? 'yellow' : 'green'"
-      :text-color="item.yellowFlagState != 'NONE' ? 'black' : 'white'"
-      dark
-    >
-      {{ item.yellowFlagState != 'NONE' ? "Yes" : "No" }}
-    </v-chip>
-  </template>
 </v-data-table>
 </template>
 
@@ -34,20 +24,16 @@
       return {
         headers: [
           { text: 'Circuit', value: 'trackName' },
+          { text: 'Remaining Time', value: 'remainingTime', width: 10},
           { text: 'Session', value: 'session', width: 10, divider: true },
-
-          { text: 'Cars', value: 'numberOfVehicles', align: 'center',width: 10, divider: true},
           
           { text: 'Wind', value: 'windSpeedVelocity',width: 10, align: 'center'},
           { text: 'Track', value: 'trackTemp',width: 10, align: 'center'},
           { text: 'Air', value: 'ambientTemp',width: 10, align: 'center', divider: true },
           
           { text: 'Rain', value: 'raining',width: 10, align: 'center'},
-          { text: 'Min', value: 'minPathWetness',width: 10, align: 'center'},
-          { text: 'Avg', value: 'averagePathWetness',width: 10, align: 'center'},
-          { text: 'Max', value: 'maxPathWetness',width: 10, align: 'center'},
 
-          { text: 'Yellow', value: 'yellowFlagState' ,
+          { text: 'Yellow', value: 'sectorFlags' ,
             align: 'center',
             width: 100,
           },

@@ -27,6 +27,7 @@ export default {
   plugins: [
     '~/plugins/transformDriverData.js',
     '~/plugins/transformSessionData.js',
+    // '~/plugins/ui_websocket.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

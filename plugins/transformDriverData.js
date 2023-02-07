@@ -4,7 +4,8 @@ function transformSecondsToTime(seconds, decimalPlaces = 3) {
   }
   const minutes = Math.floor(seconds/60)
   const restSeconds = (seconds - (minutes*60)).toFixed(decimalPlaces)
-  return `${minutes}:${restSeconds}`
+  const secondsString = restSeconds < 10 ? `0${restSeconds}` : restSeconds
+  return `${minutes}:${secondsString}`
 }
 
 function transformDistance(time, laps) {
@@ -24,18 +25,22 @@ export default ({ app }, inject) => {
       carNumber: rawItem.carNumber,
 
       driverName: rawItem.driverName,
-      fullTeamName: rawItem.fullTeamName,
+      fullTeamName: rawItem.teamName,
 
-      completedLaps: rawItem.lapsCompleted,
+      completedLaps: rawItem.currentLapsCompleted,
 
       gap: transformDistance(rawItem.timeBehindLeader,rawItem.lapsBehindLeader),
       interval: transformDistance(rawItem.timeBehindNext,rawItem.lapsBehindNext),
       
       currentLap: transformSecondsToTime(rawItem.timeIntoLap, 1),
-      estimatedLap: transformSecondsToTime(rawItem.estimatedLapTime),
+      // estimatedLap: transformSecondsToTime(rawItem.estimatedLapTime),
+      estimatedLap: transformSecondsToTime(0),
       lastLap: transformSecondsToTime(rawItem.lastLapTime),
       bestLap: transformSecondsToTime(rawItem.bestLapTime),
       
+      frontTire: rawItem.tireCompoundNameFront,
+      rearTire: rawItem.tireCompoundNameRear,
+
       pitState: rawItem.pitState,
       pitstops: rawItem.pitstops,
       penalties: rawItem.penalties,

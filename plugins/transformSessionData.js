@@ -2,7 +2,7 @@ function transformSecondsToTime(seconds) {
   const hours = Math.floor(seconds/(60*60))
   const restMinutes = (seconds - (hours*(60*60)))
   const minutes = Math.floor(restMinutes/60)
-  const restSeconds = (seconds - (minutes*60)).toFixed(0)
+  const restSeconds = (restMinutes - (minutes*60)).toFixed(0)
   const secondsString = restSeconds < 10 ? `0${restSeconds}` : restSeconds
   return `${hours}:${minutes}:${secondsString}`
 }

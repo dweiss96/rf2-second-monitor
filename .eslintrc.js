@@ -11,5 +11,9 @@ module.exports = {
   ],
   plugins: [],
   // add your custom rules here
-  rules: {},
+  rules: {
+    // fixes for vuetify
+    'vue/v-slot-style': 0,
+    'vue/valid-v-slot': 0,
+  },
 }

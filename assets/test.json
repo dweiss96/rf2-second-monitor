@@ -8,11 +8,7 @@
     "numberOfVehicles": 0,
     "gamePhase": 5,
     "yellowFlagState": "NONE",
-    "sectorFlag": [
-      "UNKNOWN",
-      "UNKNOWN",
-      "UNKNOWN"
-    ],
+    "sectorFlag": ["UNKNOWN", "UNKNOWN", "UNKNOWN"],
     "darkCloud": 0.0,
     "raining": 0.0,
     "ambientTemp": 25.850000000000023,

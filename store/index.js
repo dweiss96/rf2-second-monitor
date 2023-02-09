@@ -1,13 +1,13 @@
 // Create a new store instance.
 export const state = () => ({
   session: {},
-  drivers: []
+  drivers: [],
 })
 export const mutations = {
-  setSession (state, sessionData) {
+  setSession(state, sessionData) {
     state.session = sessionData
   },
-  setDriverData (state, driverData) {
+  setDriverData(state, driverData) {
     state.drivers = driverData
-  }
+  },
 }

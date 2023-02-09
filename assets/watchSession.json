@@ -8,11 +8,7 @@
   "numberOfVehicles": 0,
   "gamePhase": 5,
   "yellowFlagState": "NONE",
-  "sectorFlag": [
-    "UNKNOWN",
-    "UNKNOWN",
-    "UNKNOWN"
-  ],
+  "sectorFlag": ["UNKNOWN", "UNKNOWN", "UNKNOWN"],
   "startLightFrame": 0,
   "numRedLights": 5,
   "inRealtime": false,
